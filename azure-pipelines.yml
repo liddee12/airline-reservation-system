@@ -36,9 +36,8 @@ steps:
   inputs:
     SonarCloud: 'sonar&air'
     organization: 'liddeebinzel'
-    scannerMode: 'MSBuild'
-    projectKey: 'sonar.projectKey'
-    projectName: 'sonar.airline'
+    scannerMode: 'Other'
+
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'

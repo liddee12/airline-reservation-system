@@ -32,9 +32,11 @@ steps:
   inputs:
     platform: '$(buildPlatform)'
     configuration: '$(buildConfiguration)'
-- task: SnykSecurityScan@1
+- task: SonarCloudPrepare@1
   inputs:
-    serviceConnectionEndpoint: 'snyk&air'
-    testType: 'app'
-    monitorWhen: 'always'
-    failOnIssues: true
+    SonarCloud: 'sonar&air'
+    organization: 'liddeebinzel'
+    scannerMode: 'MSBuild'
+    projectKey: 'sonar.projectKey'
+    projectName: 'sonar.airline'
+    
